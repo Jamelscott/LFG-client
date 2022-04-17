@@ -17,8 +17,10 @@ const Dashboard = ({ setCurrentUser, games, currentUser }) => {
     setForm({
       id: currentUser.id,
       game_fk: '',
-      username: '',
+      username: '',     
     });
+
+    
   }, []);
 
   const handleSelect = e => {
