@@ -49,7 +49,7 @@ export default function CreateParty ({currentGame, setCurrentUser, currentUser, 
                   disabled
                 />
               </p>
-              <p>
+              {/* <p>
                 <label htmlFor='username'>Game Id: </label>
                 <input
                   type='text'
@@ -58,7 +58,7 @@ export default function CreateParty ({currentGame, setCurrentUser, currentUser, 
                   onChange={e => setForm({ ...form, gameId: e.target.value })}
                   disabled
                 />
-              </p>
+              </p> */}
               <p>
                 <label htmlFor='username'>User : </label>
                 <input
