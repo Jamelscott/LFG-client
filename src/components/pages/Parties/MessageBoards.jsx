@@ -26,7 +26,7 @@ export default function MessageBoards({currentUser, currentParty}){
                     if(counter === 15) return clearInterval(interval)
                 })
             })()
-        }, 2000)          
+        }, 500)          
         
         return () => {            
             clearInterval(interval)
