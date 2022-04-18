@@ -7,6 +7,11 @@ LFG allows a user to create a party relating to the specific game the user is pl
 # Deploy Link
 [check it out](https://boisterous-crostata-b66bd1.netlify.app/)
 
+# Deploy screenshots
+![profile-photo](./profile.png)
+![parties-photo](./parties.png)
+![party-photo](./party.png)
+
 # Tech Stack
 - MERN stack
 - Socket.io
