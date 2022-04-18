@@ -62,7 +62,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navibar currentParty={currentParty} setCurrentParty={setCurrentParty} games={games} setGames={setGames} currentGame={currentGame} setCurrentGame={setCurrentGame} currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      <Navibar currentParty={currentParty} setCurrentParty={setCurrentParty} games={games} setGames={setGames} currentGame={currentGame} setCurrentGame={setCurrentGame} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users}/>
        <Layout>
         <Routes>
         <Route 
