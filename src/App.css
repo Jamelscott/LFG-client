@@ -343,7 +343,7 @@ fieldset {
   color: var(--white);  
   background-color: var(--blue);
   /* border-bottom: .1rem dotted var(--white); */
-  width: 100vw;
+  width: 90vw;
   overflow-x:hidden;
   overflow-y: hidden;
   display: flex;
