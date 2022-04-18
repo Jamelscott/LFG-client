@@ -1,19 +1,28 @@
-# Introduction
+# LFG : A party finder web application
+
+## Introduction
 
 Are you a gamer? Feeling alone? Tired of solo queueing? Need help raiding? Don’t cry anymore! Your prayers have been answered. We introduce you to our web-based app targeting solo gamers looking for groups to party with and interact. 
 
 LFG allows a user to create a party relating to the specific game the user is playing. The admin of the party has the privileges to accept any user who wants to join the party as well as assign other members to be co-admins. Non-admin users can join any party on any game as long as they’ve sent a ‘request to join’ to the admin and the admin approves it. Once a user becomes a member, they can interact with other people in the party through the party chat. Non-members are prohibited to interact with party members.
 
-# Tech Stack
+## Link to app
+[LFG Party Finder](https://boisterous-crostata-b66bd1.netlify.app/)
+
+## Tech Stack
 - MERN stack
 - Socket.io
 - RAWG api (tbd)
 - Twitch api (tbd)
 
-# Installation
-- TBD
+## Installation
+- Fork and clone this repo. 
+- Run `npm i` to install dependecies.
+- Fork and clone the server application into another directory. It can be found here : [LFG-server](https://github.com/foosasugaome/LFG-server)
+- Run `npm i` on the server application terminal to install dependencies.
 
-# User Stories
+
+## User Stories
 - As a user, I want to be able to create a ‘Looking for Group’ posting online which will be searchable by other users connected.
 - As a user, I have the admin privileges for the party/group that I made.
 - As an admin, I can accept other user’s ‘request to join’
@@ -25,10 +34,10 @@ LFG allows a user to create a party relating to the specific game the user is pl
 - As a user, I can request a ‘permission to join’ on different parties.
 - As a user, I can interact with party members through the party chat.
 
-# EMD - Entity Model Diagram
+## EMD - Entity Model Diagram
 ![EMD](./LFG-EMD.png)
 
- ## URL Chart
+ ### URL Chart
 | Path | Purpose |
 | ------ | ---- |
 | /register | Register page 
@@ -41,7 +50,7 @@ LFG allows a user to create a party relating to the specific game the user is pl
 | /party | List all parties.
 
 
-## Routing Chart (Server)
+### Routing Chart (Server)
 | Method | Path | Purpose |
 | ------ | ---- | ------- |
 | GET | /users | Gets all user information from database
@@ -59,10 +68,10 @@ LFG allows a user to create a party relating to the specific game the user is pl
 | PUT | /party/:id/request | Send a "join party request" (Push the member to requestSchema sub-document inside the party schema.)/Move the user to memberSchema subdoc.
 | DEL | /party/:id | Deletes a specific party listing. 
 
-# Wireframes
+## Wireframes
 ![wireframe](./lfg-wireframe.PNG)
 
-# MVP
+## MVP
 - User must be able to register a user account.
 - User must be able to edit his/her profile. This includes gamer profiles, user photo, etc.
 - User must be able to create a party for a specific game.
@@ -71,7 +80,7 @@ LFG allows a user to create a party relating to the specific game the user is pl
 - The party creator can assign another party member as a co-owner of the party giving the member the privilege to edit party settings.
 - Party owners/authors must be able to screen party members before joining.
 
-# Stretch Goals
+## Stretch Goals
 - Party members can interact with other members through the party chat.
 - Search games from an API games database.
 - Require a password functionality before joining a party.
