@@ -38,7 +38,7 @@ export default function EditParty({ currentGame, currentParty, setCurrentParty, 
                         disabled
                     />
                 </p>
-                <p>
+                {/* <p>
                     <label htmlFor='gameId'>Game Id: </label>
                     <input
                         type='text'
@@ -47,7 +47,7 @@ export default function EditParty({ currentGame, currentParty, setCurrentParty, 
                         onChange={e => setForm({ ...form, gameId: e.target.value })}
                         disabled
                     />
-                </p>
+                </p> */}
                 <p>
                     <label htmlFor='username'>User : </label>
                     <input

@@ -405,6 +405,8 @@ fieldset {
 .name-list {
   display:flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   font-weight:var(--light);
   padding: 3px 0px 3px 0px;
   text-align: right;
@@ -556,7 +558,7 @@ button {
   margin-left: 2px;
   width: 60px;
 }
-<<<<<<< HEAD
+
 .card-container {
   display: flex;
   flex-direction: row;  

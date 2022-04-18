@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Login from "./components/Login"
 import Dashboard from './components/pages/Users/Dashboard';
@@ -53,10 +53,10 @@ function App() {
     .catch(console.log)
   }, [])
 
-  const handleLogout = () => {
-    if (localStorage.getItem('jwt')) localStorage.removeItem('jwt')
-    setCurrentUser(null)    
-  }
+  // const handleLogout = () => {
+  //   if (localStorage.getItem('jwt')) localStorage.removeItem('jwt')
+  //   setCurrentUser(null)    
+  // }
 
 
   return (

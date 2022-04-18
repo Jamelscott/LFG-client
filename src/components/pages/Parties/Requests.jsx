@@ -53,18 +53,18 @@ export default function Requests({ currentParty, setCurrentParty, currentUser, s
       return (
         <>
           <div className='name-list' id={`requestID-${idx}`}>
-            <span className='tooltip left' data-text={element.message}> {element.userName} - </span>
+            <span className='tooltip left' data-text={element.message}> {element.userName} &nbsp; &nbsp; </span>
             {
               filteredMember.length === 0 ? //non-members can see their requests as pending (jon)
                 <span> Status: pending </span>
                 :
-                filteredMember.length != 0 && filteredMember[0].admin === true ? //if you are a member, and an admin as well (jon)
+                filteredMember.length !== 0 && filteredMember[0].admin === true ? //if you are a member, and an admin as well (jon)
                   <>
-                    <Link to='' onClick={() => { approveRequest(element) }}>{' '}Approve{' '}</Link>|
-                    <Link to='' onClick={() => { deleteRequest(element) }}>{' '}Deny{' '}</Link>
+                    <Link to='' onClick={() => { approveRequest(element) }}>({' '}Approve{' '}</Link>&nbsp; | &nbsp;
+                    <Link to='' onClick={() => { deleteRequest(element) }}>{' '}Deny{' '})</Link>
                   </>
                   :
-                  filteredMember.length != 0 && filteredMember[0].admin === false ? // if you are a member, and not an admin (jon)
+                  filteredMember.length !== 0 && filteredMember[0].admin === false ? // if you are a member, and not an admin (jon)
                     <span> Status: pending </span>
                     :
                     null

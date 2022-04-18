@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 import moment from "moment"
 export default function MessageBoards({currentUser, currentParty}){
     const [form, setForm] = useState({
@@ -44,7 +44,7 @@ export default function MessageBoards({currentUser, currentParty}){
     const listChatMsg = boardMsg.map((element, idx) => {
         return (
             <>
-            <div className={currentUser.id===element.userId ? "message-container chat-user-color" : "message-container" } >
+            <div className={currentUser.id === element.userId ? "message-container chat-user-color" : "message-container" } >
              <span className='chat-user'><small>{moment(element.createdAt).format('HH:mm DD MMM yyyy ddd')}</small></span>
              <span className='chat-user' key={`user-key${idx}`}><p>
                  {
