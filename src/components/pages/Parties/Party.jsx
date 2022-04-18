@@ -24,7 +24,7 @@ function Party({
 
   // if filteredRequest != 0, currentUser has already sent a request (jon)
   const filteredRequest = currentParty.requests.filter(request => {
-    if (request.userId === currentUser.id)
+    if (request.userId === currentUser.id) 
       return request
   })
 
@@ -54,13 +54,13 @@ function Party({
           <h1>{currentParty.partyName} </h1>
         </div>
         <div className='menu-holder'>
-          {filteredMember.length == 0 && filteredRequest.length == 0 ? // if the user doesn't belong to the party and hasn't sent a request (jon)
+          {filteredMember.length === 0 && filteredRequest.length === 0 ? // if the user doesn't belong to the party and hasn't sent a request (jon)
             <>
               <Link to='' onClick={() => setSelectedComponent('1')}>
                 Join this party
               </Link>
             </>
-            : filteredMember.length != 0 && filteredMember[0].admin === true ? // if the user is a member and an admin (jon)
+            : filteredMember.length !== 0 && filteredMember[0].admin === true ? // if the user is a member and an admin (jon)
               <>
                 <Link to='' onClick={() => setSelectedComponent('2')}>
                   Edit Party
@@ -112,8 +112,14 @@ function Party({
           setCurrentParty={setCurrentParty}
         />
       </div>
-
-      <MessageBoards currentUser={currentUser} currentParty={currentParty} />
+      {filteredMember.length !== 0 ?
+        <MessageBoards currentUser={currentUser} currentParty={currentParty} />
+        :
+        <>
+          <div className='message-container'>Message Board Access: Denied!</div>
+          <div className='message-container'>Please Join the party first!</div>
+        </>
+      }         
     </>
   )
 }
