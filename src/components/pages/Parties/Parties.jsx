@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Parties({ parties, currentParties, setCurrentParties, currentGame, setCurrentGame, currentParty, setCurrentParty, refresher, setRefresher, currentUser}) {
+export default function Parties({ parties, currentParties, setCurrentParties, currentGame, setCurrentGame, currentParty, setCurrentParty, refresher, setRefresher}) {
 
   const [search, setSearch] = useState("")
   useEffect(() => {
@@ -15,12 +15,13 @@ export default function Parties({ parties, currentParties, setCurrentParties, cu
       console.log(err);
     }
   }, [currentGame,refresher]);  
+  
   const handlePartySelect = party => {      
     setCurrentParty(party)
   }
 
 
-  let filteredParties = currentParties.filter(party => party.partyName.includes(search))
+  let filteredParties = currentParties.filter(party => party.partyName.toLowerCase().trim().includes(search.toLowerCase().trim()))
   
   const listParties = filteredParties.map((element, idx) => {
     return (      
@@ -50,13 +51,7 @@ export default function Parties({ parties, currentParties, setCurrentParties, cu
     </fieldset>
     </div>
     <div className='navbar-party-footer'>
-    {
-      currentUser
-      ?
-      <p><Link to='/party'>Create a party</Link></p>
-      :
-      null
-    }
+    <p><Link to='/party'>Create a party</Link></p>
     </div>  
   </>  
   

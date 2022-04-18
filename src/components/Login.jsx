@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 import jwt_decode from "jwt-decode"
+import { Link } from "react-router-dom"
 import { Navigate } from "react-router-dom"
 // import "../layout/Login.css"
 
@@ -54,7 +55,7 @@ export default function Login({ currentUser, setCurrentUser }) {
           <div>
             <label hidden htmlFor="username"></label>
             <input
-              style={{paddingLeft: "15px" , borderRadius: '20px', width: '250px'}}
+              style={{paddingLeft: "15px" , borderRadius: '20px', width: '250px', height:"40px", marginBottom:"10px"}}
               placeholder=" enter username"
               type="text"
               id="username"
@@ -66,7 +67,7 @@ export default function Login({ currentUser, setCurrentUser }) {
             {/* Password Input */}
             <label hidden htmlFor="password"></label>
             <input
-              style={{paddingLeft: "15px" ,borderRadius: '20px', width: '250px'}}
+              style={{paddingLeft: "15px" ,borderRadius: '20px', width: '250px', height:"40px", marginBottom:"10px"}}
               placeholder=" enter password"
               type="password"
               id="password"
@@ -80,9 +81,9 @@ export default function Login({ currentUser, setCurrentUser }) {
           </button>
           <p style={{fontSize: "14px", color: "white"}}>
             Don't have an account?{" "}
-            <a style={{color: "white"}} href="/signup" className="a-tag">
+            <Link style={{color: "white"}} to="/signup" className="a-tag">
               Create one
-            </a>
+            </Link>
           </p>
         </form>
 

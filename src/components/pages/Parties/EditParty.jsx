@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export default function EditParty({ currentGame, currentParty, setCurrentParty, currentUser, setSelectedComponent, refresher, setRefresher }) {
     console.log(currentGame)
