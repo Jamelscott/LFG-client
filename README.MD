@@ -19,15 +19,17 @@ LFG allows a user to create a party relating to the specific game the user is pl
   
 </details>
 
-# Tech Stack
+## Tech Stack
 - MERN stack
 - Socket.io
 - RAWG api (tbd)
 - Twitch api (tbd)
 
-# Installation
-- [backend repository](https://github.com/Jamelscott/LFG-server)
-- TBD
+## Installation
+- Fork and clone this repo. 
+- Run `npm i` to install dependecies.
+- Fork and clone the server application into another directory. It can be found here : [LFG-server](https://github.com/foosasugaome/LFG-server)
+- Run `npm i` on the server application terminal to install dependencies.
 
 # User Stories
 - As a user, I want to be able to create a ‘Looking for Group’ posting online which will be searchable by other users connected.
