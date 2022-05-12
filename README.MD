@@ -22,8 +22,6 @@ LFG allows a user to create a party relating to the specific game the user is pl
 ## Tech Stack
 - MERN stack
 - Socket.io
-- RAWG api (tbd)
-- Twitch api (tbd)
 
 ## Installation
 - Fork and clone this repo. 
