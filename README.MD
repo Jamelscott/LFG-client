@@ -7,7 +7,7 @@ LFG allows a user to create a party relating to the specific game the user is pl
 
 # Deploy Link
 
-[check it out](https://boisterous-crostata-b66bd1.netlify.app/)
+[check it out](https://lookingforgroup.netlify.app/)
 
 # Deploy screenshots
 <details>
